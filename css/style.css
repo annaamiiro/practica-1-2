@@ -1,0 +1,704 @@
+/*HEADER*/
+html, body {
+  overflow-x: hidden; /* Evita que la página se desplace horizontalmente */
+  margin: 0;
+  padding: 0;
+}
+html{
+    scroll-padding-top: 20%; /*afegir padding perq al fer scroll el header no cobreixi el contingut*/
+}
+
+.logo {
+    display: flex; /* Utiliza flexbox para alinear la imagen y el texto en una fila */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
+.logo-img {
+    max-height: 70px; /* Ajusta el tamaño máximo de la imagen, puedes cambiarlo según tu preferencia */
+    margin-right: 50px; /* Espacio entre la imagen y el texto del logo */
+}
+
+/* Selecciona el header principal */
+header {
+  background-color: #000 !important; /* Fondo negro con !important */
+  color: #fff; /* Texto en blanco */
+  padding: 10px;
+  position: fixed !important; /* Manté el header fixe */
+  top: 0; /* Col·loca el header a la part superior */
+  left: 0; /* Col·loca el header a l'esquerra */
+  width: 100%; /* Amplada completa */
+  z-index: 1000; /* Assegura't que estigui per sobre d'altres elements */
+}
+
+header nav a {
+  color: #fff !important; /* Links en blanco */
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+header .logo h1 {
+  color: #fff !important; /* Texto del logo en blanco */
+}
+
+
+
+/* Aplica un margen al último elemento de navegación */
+nav a:last-child {
+  margin-right: 50px; /* Ajusta el valor según el espacio que necesites */
+}
+
+.carousel{
+    margin-top: 0;
+    width: 100vw; /*ocupa el 100% de l'ample de la pantalla*/
+    height: 20%;
+    /*S'ha afegit aquest codi perquè el padding del body afectava al element i no es podia centrar a la pantalla.
+    De manera que left 50% i transform corregeixen el desplaçament generat per tal de centrar el carousel en tota la pantalla.*/
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+#header{
+  background-color: #000;
+}
+h1{
+  font-family: 'Inter', sans-serif;
+    color: #000 !important;
+    font-size: 2em !important;
+}
+
+h2{
+    font-family: 'Verdana';
+   padding-bottom: 3%; /*afegeix espai entre titol i el text*/
+   text-align: center;
+   font-size: 10px;
+}
+
+p{
+    font-family:'Verdana';
+    line-height: 2;
+    text-align: justify;
+
+}
+
+#galeria p {
+    margin-bottom: 5%; /* Ajusta el valor según el espacio que prefieras */
+  }
+
+#inici h2{
+  margin-top: 5%;
+}
+#inici p{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#serveis h2{
+  color: #000;
+  margin-top: 5%;
+}
+#galeria h2{
+  margin-top: 5%;
+}
+#galeria p{
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+#contacte h2 {
+  margin-top: 5%;
+}
+
+/* NAVEGACIÓ / MENU */
+.navegacio {
+    display: flex; /* Utilitza Flexbox per organitzar els elements dins de la llista de navegació */
+    flex-direction: row; /* Ordena els elements en una fila horitzontal */
+    flex-wrap: nowrap; /* els elements no van a una nova línea*/
+    justify-content: flex-end; /* Alinea els elements del menú a la dreta */
+    align-items: center; /* Alinea els elements de la fila a l'esquerra verticalment */
+    list-style-type: none; /* Elimina els punts negres de la llista */
+    margin: 0;  /* Elimina qualsevol marge per defecte de la llista */
+    padding: 0; /* Elimina el padding per defecte */
+}
+
+/*TEXT MENU*/
+.caja {
+    color: #fff; /* Estableix el color del text dels elements del menú en blanc */
+    margin: 0.5em; /* Afegeix un marge extern de 0.5em al voltant de cada element del menú */
+    padding: 0.5em; /* Afegeix un padding intern de 0.5em dins de cada element del menú */
+    font-size: 1.2em; /* Augmenta la mida del text a 1.5 vegades l'em mida per defecte */
+    text-align: center; /* Centra el text dins de cada element del menú */
+    text-decoration: none; /*eliminar subratllat*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*Cards*/
+
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Para que el contenido ocupe toda la altura de la tarjeta */
+}
+
+.card .contenido-card h3{
+    font-family: 'Verdana';
+    font-size: 20px;
+	margin-bottom: 15px;
+	color: #000;
+}
+.card .contenido-card p{
+    font-family: 'Verdana';
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.card .contenido-card a{
+	display: inline-block;
+	padding: 10px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #2fb4cc;
+	border: 1px solid #2fb4cc;
+	border-radius: 4px;
+	transition: all 400ms ease;
+	margin-bottom: 5px;
+}
+.card .contenido-card a:hover{
+	background: #2fb4cc;
+	color: #fff;
+}
+
+
+/*Camera NetArt*/
+  
+  .Camera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    user-select: none;
+  }
+  
+  .camera-viewfinder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    position: relative;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 1.5em;
+  }
+  
+  
+  #random-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Oculta la imagen al inicio */
+  }
+  
+  /* Flash */
+  #flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: none;
+    z-index: 100;
+  }
+  
+
+        
+  * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgb(123, 158, 158);
+}
+
+
+#hexGrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: sans-serif;
+  list-style-type: none;
+  margin-bottom: 10%;
+}
+
+.hex {
+  position: relative;
+  visibility:hidden;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+  transition: all 0.5s;
+  backface-visibility: hidden;
+  will-change: transform;
+  transition: all 0.5s;
+}
+.hex::after{
+  content:'';
+  display:block;
+  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
+}
+.hexIn{
+  position: absolute;
+  width:96%;
+  padding-bottom: 110.851%; /* =  width / sin(60) */
+  margin: 2%;
+  overflow: hidden;
+  visibility: hidden;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+    transition: all 0.5s;
+}
+.hexIn * {
+  position: absolute;
+  visibility: visible;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.hexLink {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+}
+
+
+
+
+/*** HEX CONTENT **********************************************************************/
+.hex img {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hex h1, .hex p {
+  width: 100%;
+  padding: 5%;
+  box-sizing:border-box;
+  font-weight: 300;
+  opacity: 0;
+}
+
+#demo1 {
+  color: #F5CE95;
+  text-transform: capitalize;
+    text-align: center;
+  bottom: 50%;
+  padding-top:50%;
+  font-size: 1.5em;
+  z-index: 1;
+}
+.hex h1:before, .hex h1:after {
+  display: inline-block;
+  margin: 0 0.5em;
+  width: 0.25em;
+  height: 0.03em;
+  background: #ffffff;
+  content: '';
+  vertical-align: middle;
+  transition: all 0.3s;
+  text-align:center;
+}
+
+#demo2 {
+top: 50%;
+text-align: center;
+text-transform: uppercase;
+    
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.img:before, .img:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.img:before {
+  background: rgba(22, 103, 137, 0.3)
+}
+.img:after {
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/*** HOVER EFFECT  **********************************************************************/
+
+
+
+.hexLink:hover h1, .hexLink:focus h1,
+.hexLink:hover p, .hexLink:focus p{
+opacity:1;
+transition: 0.8s;
+}
+
+
+.hexIn:hover .img:before,
+.hexIn:hover .img:after,
+.hexIn:hover .hexLink {
+  opacity: 1;
+}
+
+
+/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+@media (min-width:1201px) { /* <- 5-4  hexagons per row */
+  #hexGrid{
+    padding-bottom: 4.4%
+  }
+  .hex {
+    width: 20%; /* = 100 / 5 */
+  }
+  .hex:nth-child(9n+6){ /* first hexagon of even rows */
+    margin-left:10%;  /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
+  #hexGrid{
+    padding-bottom: 5.5%;
+    font-size: 13px;
+  }
+  .hex {
+    width: 25%; /* = 100 / 4 */
+  }
+  .hex:nth-child(7n+5){ /* first hexagon of even rows */
+    margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
+  #hexGrid{
+    padding-bottom: 7.4%;
+    font-size: 14px;
+  }
+  .hex {
+    width: 33.333%; /* = 100 / 3 */
+  }
+  .hex:nth-child(5n+4){ /* first hexagon of even rows */
+    margin-left:16.666%;  /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 600px) { /* <- 2-1  hexagons per row */
+  #hexGrid{
+    padding-bottom: 11.2%;
+    font-size: 12px;
+  }
+  .hex {
+    width: 50%; /* = 100 / 3 */
+  }
+  .hex:nth-child(3n+3){ /* first hexagon of even rows */
+    margin-left:25%;  /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 400px) {
+    #hexGrid {
+        font-size: 8px;
+    }
+  
+
+  
+ 
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #F2F2F2;
+}
+
+header {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.01);
+    z-index: 100;
+    padding: 10px;
+  position: relative; /* Posicionamiento para el menú desplegable */
+}
+
+/* Estilo para el menú hamburguesa */
+.menu-icon {
+  cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+}
+
+.menu-icon div {
+  background-color: #fff; /* Líneas del menú hamburguesa en blanco */
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+}
+
+
+.logo {
+    display: flex;
+    gap: 15px;
+}
+.logo h1 {
+    color: #007AFF;
+    font-size: 35px;
+    font-weight: 800;
+}
+.logo h1 span {
+    color: #312ECB;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #312ECB;
+}
+
+input {
+    display: none;
+}
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 100px; /* Ajusta esto según la altura de tu header */
+        background: #000; /* Cambia el fondo a negro o a otro color que contraste con el texto */
+        left: 0;
+        width: 100%;
+        align-items: center;
+        height: 0; /* Oculta el menú inicialmente */
+        transition: height 0.5s; /* Efecto de transición */
+        overflow: hidden; /* Oculta el contenido desbordante */
+        display: flex; /* Usar flexbox para centrar */
+        flex-direction: column; /* Colocar los elementos en una columna */
+        align-items: center; /* Centrar horizontalmente */
+    }
+
+    nav a {
+        color: white; /* Asegúrate de que el texto sea blanco para que resalte sobre el fondo oscuro */
+        font-size: 22px;
+        font-weight: bold;
+        margin: 15px 0; /* Agrega un margen entre los elementos del menú */
+        transition: color 0.3s; /* Efecto de transición al pasar el mouse */
+    }
+
+    /* Al hacer clic en el input, muestra el menú */
+    input:checked + header nav {
+        height: 100vh; /* Ajusta esto si deseas que el menú ocupe toda la altura */
+    }
+}
+    nav a:nth-child(1) {
+        margin-top: 50px;
+    }
+
+    label {
+        width: 45px;
+        height: 30px;
+        position: relative;
+    }
+    label div {
+        width: 100%;
+        height: 5px;
+        background: #fff;
+        position: absolute;
+        transform: translateY(-50%);
+        border-radius: 99px;
+        transition: 0.3s;
+        transform: scale(1);
+        margin-right: 5%;
+        color: #000 ;
+    }
+    label div:nth-child(1) {
+        top: 0;
+    }
+    label div:nth-child(2) {
+        top: 50%;
+    }
+    label div:nth-child(3) {
+        top: 100%;
+    }
+
+    input:checked + header nav {
+        height: 100vh;
+    }
+    input:checked + header label div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+    input:checked + header label div:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+    input:checked + header label div:nth-child(2) {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+#footer body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #000;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.icon {
+  color: white;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  transform: translateY(-10px);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menu-elem {
+  list-style: none;
+}
+.menu-icon {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}

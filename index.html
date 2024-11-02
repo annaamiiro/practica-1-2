@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!-- <html lang="en">-->
+<html lang="es" style="font-size:100%">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Anima Studio</title>
+    <link rel="stylesheet " href="css/style.css" >
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+    <!--links javascript del p5js-->
+    <script src="JavaScript/sketch.js"></script>
+    <script src="JavaScript/p5.js"></script>
+</head>
+
+<body>
+     <!-- Encabezado de la pagina amb rol de banner -->
+    <header>
+      <input type="checkbox" id="menu">
+      <!-- END MOBILE SCREEN -->
+      <header>
+          <div class="logo">
+            <img src="img/logo.jpg" width="50" height="39" alt="Logo">
+              <h1>ANIMA STUDIO</h1>
+          </div>
+          <!-- MOBILE SCREEN -->
+          <label for="menu">
+              <div></div>
+              <div></div>
+              <div></div>
+          </label>
+          <!-- END MOBILE SCREEN -->
+          <nav>
+              <a href="#inici">Inici</a>
+              <a href="#serveis">Serveis</a>
+              <a href="#galeria">Galeria</a>
+              <a href="#contacte">Contacte</a>
+          </nav>
+      </header>
+    </header>
+
+<!--Àrea principal amb rol de main-->
+<main role="main">
+<section>
+    <!--Slider fotos-->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/slider1.jpg" class="d-block w-100" alt="Pluja d'estels">
+          </div>
+          <div class="carousel-item">
+            <img src="img/slider2.jpg" class="d-block w-100" alt="Família feliç al camp">
+          </div>
+          <div class="carousel-item">
+            <img src="img/slider3.jpg" class="d-block w-100" alt="Paisatge de la muntanya">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!--Secció inici, sobre nosaltres-->
+    <section id="inici" aria-label="sobre nosaltres">
+      <div class="sobre-nosaltres-container">
+          <div class="text-container">
+              <h2><b>SOBRE NOSALTRES</b></h2>
+              <p>Benvinguts a <b>ANIMA Studio</b>, on la passió per la fotografia es troba amb la creativitat i l'art. Fundat per Anna Miró i Míriam Llaquet el 2022, el nostre estudi ha estat capturant moments únics i creant records inoblidables.</p>
+              <p>Amb anys d'experiència en el sector, el nostre equip de professionals s'especialitza en una àmplia gamma de serveis fotogràfics, des de sessions de retrat personalitzades fins a cobertures d'esdeveniments. Creiem que cada imatge explica una història, i el nostre objectiu és captar l'essència de cada moment, permetent-te revivir les emocions a través de les nostres fotos.</p>
+              <p>Ens enorgullim de la nostra atenció al detall i del tracte personalitzat amb cada client. A ANIMA Studio, no només som fotògrafs; som narradors visuals que busquen immortalitzar els moments més significatius de la teva vida.</p>
+          </div>
+      </div>
+  </section>
+  
+   <!--Secció serveis-->
+   <section id="serveis" aria-label="els nostres serveis">
+    <h2><b>ELS NOSTRES SERVEIS</b></h2>
+    	<!--   Tarjetas-->
+
+<div class="row">
+
+  <div class="col-md-4 ml-3 mb-sm-0">
+    <div class="card" style="width: 18rem;">
+      <img src="img/boda.jpg" class="card-img-top" alt="Parella besant-se en la seva boda">
+      <div class="card-body">
+        <h5 class="card-title">Bodes</h5>
+        <p class="card-text">Captura moments clau del dia de noces, incloent emocions i detalls importants.</p>
+        <p></p>
+        <p></p>
+        <a href="#contacte" class="btn btn-primary">Contractar</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4 ml-3">
+    <div class="card" style="width: 18rem;">
+      <img src="img/retrat.jpg" class="card-img-top" alt="Retrat d'una noia somrient">
+      <div class="card-body">
+        <h5 class="card-title">Retrats</h5>
+        <p class="card-text">Fotografies individuals o familiars que reflecteixen la personalitat i emocions dels subjectes.</p>
+        <a href="#contacte" class="btn btn-primary">Contractar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 ml-3">
+    <div class="card" style="width: 18rem;">
+      <img src="img/esd.jpg" class="card-img-top" alt="Nens celebrant un aniversari">
+      <div class="card-body">
+        <h5 class="card-title">Esdeveniments</h5>
+        <p class="card-text">Documentació de celebracions com aniversaris o festes, capturant moments significatius i l'ambient.</p>
+        <a href="#contacte" class="btn btn-primary">Contractar</a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<!--Fin   Tarjetas-->
+
+    </section>
+
+    <!--Secció galeria-->
+   <section id="galeria" aria-label="galeria">
+    <h2> <b>GALERIA D'IMATGES</b></h2>
+    <p>Descobreix la bellesa de la natura a través de la nostra mirada. A continuació, et presentem una selecció de fotografies del nostre treball que pretén capturar l'essència de cada moment. Gaudeix del viatge visual!</p>
+    <div class="grid">
+      <ul id="hexGrid">
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image:url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=faa4e192f33e0d6b7ce0e54f15140e42);' alt="Paisatge d'una muntanya nevada"></div>
+            </a>
+          </div>
+        </li>
+          
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=49dab7a5e4b2e28b5707bc2db974c94b);' alt="Fotografia d'un os bru"></div>
+
+            </a>
+          </div>
+        </li>
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=d453ab3dec298c43415526458b360fa6);'alt="Mussol de perfil"></div>
+    
+            </a>
+          </div>
+        </li>
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'alt="Un cavall en un paisatge nevat"></div>
+ 
+            </a>
+          </div>
+        </li>
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'alt="Un iceberg amb un pingüí"></div>
+
+            </a>
+          </div>
+        </li>
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+           <div class='img' style='background-image: url(https://images.pexels.com/photos/28440464/pexels-photo-28440464/free-photo-of-garceta-bovina-en-habitat-natural-paisatgistic.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);'alt="Un ocell en un bosc"></div>
+
+            </a>
+          </div>
+        </li>
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'alt="Troncs tallats apilats en un bosc"></div>
+      
+            </a>
+          </div>
+        </li>
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=1375&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=1725);'alt="Una rama d'una planta"></div>
+          
+            </a>
+          </div>
+        </li>
+        <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.pexels.com/photos/9880779/pexels-photo-9880779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);'alt="Un cérvol d'esquena"></div>
+         
+            </a>
+          </div>
+        </li>
+        
+       <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image:url(https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);'alt="Un pont en un bosc"></div>
+        
+            </a>
+          </div>
+        </li>
+          <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);'alt="Un camí en un bosc nevat"></div>
+            </a>
+          </div>
+        </li>
+            <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+                  <div class='img' style='background-image: url(https://images.pexels.com/photos/29152478/pexels-photo-29152478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);'alt="Una cascada"></div>
+            </a>
+          </div>
+        </li>
+          <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.pexels.com/photos/8779337/pexels-photo-8779337.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);'alt="Una guineu"></div>
+            </a>
+          </div>
+        </li>
+          <li class="hex">
+          <div class="hexIn">
+            <a class="hexLink">
+              <div class='img' style='background-image: url(https://images.pexels.com/photos/29162609/pexels-photo-29162609/free-photo-of-cabana-rustica-en-un-entorn-forestal.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);'alt="Una casa al bosc"></div>
+            </a>
+          </div>
+        </li>
+      </ul>
+        </div>
+
+    <!--Net Art-->
+  <p><b>Ara et toca a tu!</b> Utilitza la següent càmera per capturar moments i converteix-te en tot un professional!</p>
+  <div class="Camera">
+    <div class="camera-viewfinder">
+      <p id="capture-text">Fes clic per "capturar" el moment</p>
+      <img id="random-image" src="" alt="Imagen aleatoria" style="display: none;">
+    </div>
+  </div>
+    
+    <!-- Flash efecto -->
+    <div id="flash"></div>
+
+  </section>
+
+  <!-- Secció contacte -->
+
+<section id="contacte" aria-label="contacte" class="container">
+  <h2><b>INFORMACIÓ DE CONTACTE</b></h2>
+  
+  <div class="d-flex flex-wrap align-items-start justify-content-center">
+    <!-- Formulario de contacto -->
+    <form style="width: 100%; max-width: 26rem;" class="me-4">
+      <!-- Nombre -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <p>Nom complet</p>
+        <input type="text" id="form4Example1" class="form-control" />
+        <label class="form-label" for="form4Example1"></label>
+      </div>
+      
+      <!-- Email -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <p>Correu electrònic</p>
+        <input type="email" id="form4Example2" class="form-control" />
+        <label class="form-label" for="form4Example2"></label>
+      </div>
+      
+      <!-- Mensaje -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <p>Missatge</p>
+        <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+        <label class="form-label" for="form4Example3"></label>
+      </div>
+    
+      <!-- Botón de envío -->
+      <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Enviar</button>
+    </form>
+    
+    <!-- Mapa -->
+    <div id="map" style="flex: 1; max-width: 500px; height: 400px; margin-left: 40px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.845118771038!2d0.6274114155567451!3d41.61751387917277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49dcb1b6337f3%3A0x5c2d39e9cf8d2993!2sEscola%20Polit%C3%A9cnica%20Superior%20de%20la%20Universitat%20de%20Lleida!5e0!3m2!1sen!2sus!4v1694559937323!5m2!1sen!2sus"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!--Peu de pàgina amb rol contentinfo-->
+<footer class="footer">
+  <ul class="social-icon">
+    <li class="icon-elem">
+      <a href="https://www.youtube.com/" class="icon">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="https://www.instagram.com/" class="icon">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="https://www.whatsapp.com/?lang=es" class="icon">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="https://www.facebook.com/" class="icon">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </li>
+    <li class="icon-elem">
+      <a href="https://workspace.google.com/intl/es/gmail/" class="icon">
+        <ion-icon name="mail-outline"></ion-icon>
+      </a>
+    </li>
+  </ul>
+  <ul class="menu">
+    <li class="menu-elem">
+      <a href="#inici" class="menu-icon"> Inici </a>
+    </li>
+    <li class="menu-elem">
+      <a href="serveis" class="menu-icon"> Serveis </a>
+    </li>
+    <li class="menu-elem">
+      <a href="galeria" class="menu-icon"> Galeria </a>
+    </li>
+    <li class="menu-elem">
+      <a href="contacte" class="menu-icon"> Contacte </a>
+    </li>
+  </ul>
+  <p class="text">2024 | Pràctica web dinàmica</p>
+</footer>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+<!--Ficar el link del sketch de p5js aqui-->
+<script src="sketch.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
